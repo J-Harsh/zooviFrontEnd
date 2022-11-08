@@ -7,6 +7,7 @@ const DataContext = ({children}) => {
 
 const [products, setProducts] = useState(null);
 const [brands, setBrands] = useState(null);
+const [search, setSearch] = useState("")
 
  
 
@@ -22,7 +23,7 @@ setProducts(data.products);
 
 
   return (
-    <Data.Provider value={{brands,products}}>
+    <Data.Provider value={{brands,products,search, setSearch}}>
         {children}
     </Data.Provider>
   )

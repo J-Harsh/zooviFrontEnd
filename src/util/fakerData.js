@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker';
         return({
             id:faker.datatype.uuid(5),
             name:faker.commerce.productName(),
-            imgUrl:faker.image.fashion(1234, 2345, true),
+            imgUrl:faker.image.fashion(720, 1280, true),
             price:faker.commerce.price(100, 3000, 0, '₹'),
             rating:faker.datatype.bigInt({ min: 1, max: 5 }),
             numberOfRatings:faker.datatype.bigInt({ min: 10, max: 100 }),
