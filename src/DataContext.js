@@ -9,7 +9,7 @@ const [products, setProducts] = useState(null);
 const [company, setCompany] = useState(null);
 const [search, setSearch] = useState("");
 const [filters, setFilters] = useState({"brands":[],"rangeMax":null,"rating":[]});
-console.log(products );
+console.log(filters );
 
 useEffect(() => {
 

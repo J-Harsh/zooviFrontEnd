@@ -1,5 +1,5 @@
 import React from 'react'
-import { DataState } from '../../DataContext';
+import { DataState } from '../DataContext';
 import "./SearchPopup.scss"
 
 const SearchPopup = () => {

@@ -10,23 +10,10 @@
     display: flex;
    
 
-    .filterSection{
-        flex:1;
-        margin: 20px 16px;
-        .filterContainer{
-            display: flex;
-            flex-direction: column;
-            background: blue;
-        }
-    }
+   
 
     .productContainer{
-        flex: 3;
-        background: pink;
-
-        .gridBox{
-            display: grid;
-
-        }
+        flex: 7;
+        background: red;
     }
 }

@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import Searchbar from "../components/Atoms/Searchbar";
-import SearchPopup from "../components/Atoms/SearchPopup";
+import SearchPopup from "../components/SearchPopup";
 import "./search.scss";
 
 const Search = () => {
