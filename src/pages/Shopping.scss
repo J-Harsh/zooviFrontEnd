@@ -1,0 +1,32 @@
+.navBar{
+    h1{
+        
+            margin: 12px 0px 12px 16px;
+        
+    }
+}
+
+.content{
+    display: flex;
+   
+
+    .filterSection{
+        flex:1;
+        margin: 20px 16px;
+        .filterContainer{
+            display: flex;
+            flex-direction: column;
+            background: blue;
+        }
+    }
+
+    .productContainer{
+        flex: 3;
+        background: pink;
+
+        .gridBox{
+            display: grid;
+
+        }
+    }
+}

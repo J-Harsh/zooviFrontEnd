@@ -6,24 +6,33 @@ const Data=createContext();
 const DataContext = ({children}) => {
 
 const [products, setProducts] = useState(null);
-const [brands, setBrands] = useState(null);
-const [search, setSearch] = useState("")
-
- 
-
+const [company, setCompany] = useState(null);
+const [search, setSearch] = useState("");
+const [filters, setFilters] = useState({"brands":[],"rangeMax":null,"rating":[]});
+console.log(products );
 
 useEffect(() => {
 
-setBrands(data.brands);
-setProducts(data.products);
-  
+setCompany(data.brands);
+
 }, [])
 
+  useEffect(() => {
+    let arr=data.products;
+    if(filters.brands.length!=0)
+      arr=arr.filter(((item)=> filters.brands.includes(item.brand)))
+    if(filters.rating.length!=0)
+      arr=arr.filter(((item)=> filters.rating.includes(item.rating)))
+    if(filters.rangeMax!=null)
+      arr=arr.filter((item)=>item.price<=filters.rangeMax)
+    
+setProducts(arr);
+  }, [filters])
   
 
 
   return (
-    <Data.Provider value={{brands,products,search, setSearch}}>
+    <Data.Provider value={{company,products,search, setSearch,filters,setFilters}}>
         {children}
     </Data.Provider>
   )
