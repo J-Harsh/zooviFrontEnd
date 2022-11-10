@@ -1,0 +1,101 @@
+
+    .cards_item {
+        display: flex;
+        list-style-type: none;
+  
+        .card {
+          position: relative;
+          width: 100%;
+          height: 520px;
+          transition: all 300ms ease;
+  
+          &:hover {
+            transform: scale(1.02);
+          }
+  
+          .heart_icon {
+            cursor: pointer;
+            font-size: 32px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 10px;
+            z-index: 2;
+            color:white;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            &:hover {
+              color: rgb(17, 195, 208);
+            }
+            &.active {
+              color: rgb(69, 248, 245);
+            }
+          }
+
+
+  
+          .card_image {
+            width: 100%;
+            height: 70%;
+            opacity: 0.9;
+          }
+
+          
+          .view-btn{
+            background: rgba(103, 76, 239, 0.782);
+            width: 100%;
+            height: 10%;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            position: absolute;
+            margin-bottom: 60%;
+            bottom: 0;
+            left: 0;
+            cursor: pointer;
+        }
+          .card_content {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            
+            h3 {
+              font-size: 22px;
+              font-weight: 400;
+            }
+            .card_title {
+              text-transform: capitalize;
+            }
+  
+            .priceSection {
+              display: flex;
+              gap: 12px;
+              .original {
+                text-decoration: line-through;
+                color: gray;
+  
+                font-weight: 400;
+              }
+              .discounted {
+                color: blue;
+                font-weight: 600;
+              }
+              ._price {
+                font-size: 18px;
+              }
+            }
+  
+            .ratingSection {
+              .ratings {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }

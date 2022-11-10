@@ -99,10 +99,10 @@ const FilterSection = () => {
               <input
                 type="checkbox"
                 name="rating"
-                value={index+1}
+                value={5-index}
                 onChange={(e) => handleArray(e)}
               />
-              <label className="input_label">{"★".repeat(index+1)}</label>
+              <label className="input_label">{"★".repeat(5-index)}</label>
             </div>
               )
             })}
