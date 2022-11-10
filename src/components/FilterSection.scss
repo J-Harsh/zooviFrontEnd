@@ -14,6 +14,7 @@
     margin: 18px 16px;
     cursor: pointer;
     h2 {
+      font-weight: 500;
       text-transform: capitalize;
     }
     
@@ -39,16 +40,16 @@
       -webkit-appearance: none;
       width: 75%;
       height: 7px;
-      background: rgba(255, 255, 255, 0.6);
+      background: gray;
       border-radius: 5px;
-      background: rgb(239, 239, 29);
+      background: rgb(141, 121, 238);
 
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
         height: 20px;
         width: 20px;
         border-radius: 50%;
-        background: rgb(42, 39, 39);
+        background: rgb(44, 44, 44);
         cursor: pointer;
         box-shadow: 0 0 2px 0 #555;
         transition: all 0.3s ease-in-out;
@@ -67,5 +68,24 @@
       font-weight: 500;
     }
 
+  }
+
+}
+
+@media (max-width: 768px) {
+  .filterSection {
+    flex: 2;
+
+    .filterHeading{
+      h2{
+        font-size: 16px;
+      }
+    }
+
+    .filterContainer{
+      .input_label{
+        font-size: 14px;
+      }
+    }
   }
 }

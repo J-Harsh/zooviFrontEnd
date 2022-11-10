@@ -10,11 +10,9 @@ const ProductSection = () => {
 
   return (
     <div className="productContainer">
-      <div className="cards">
-        {products?.map((item) => (
+        {products?.length>0? <div className="cards">{products?.map((item) => (
           <ProductCard key={item.id} item={item}/>
-        ))}
-      </div>
+        ))}</div>:<h2 className="notFound">No items found please try again as we are constantly adding items in out inventory 😊😊</h2> }
     </div>
   );
 };

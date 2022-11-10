@@ -18,6 +18,7 @@ const FilterSection = () => {
     });
   };
 
+
   const handleArray = (e) => {
     const name = e.target.name;
     const newBrands = { [e.target.name]: [...filters[name]] };

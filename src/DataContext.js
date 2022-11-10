@@ -8,7 +8,6 @@ const DataContext = ({children}) => {
 const [products, setProducts] = useState(null);
 const [company, setCompany] = useState(null);
 const [filters, setFilters] = useState({"brands":[],"rangeMax":null,"rating":[],"search":""});
-console.log(filters);
 
 useEffect(() => {
 

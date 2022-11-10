@@ -1,14 +1,22 @@
-.searchbarContainer{
-    margin: 24px auto;
-    width: 50%;
-    
+.searchbarContainer {
+  margin: 24px auto;
+  width: 50%;
 }
 
-.heading{
-    margin-left: 32px;
+.heading {
+  margin-left: 32px;
 }
 
-.content{
-    display: flex;
+.content {
+  display: flex;
+}
 
+@media (max-width: 414px) {
+  .heading{
+    font-size: 20px;
+  }
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
 }

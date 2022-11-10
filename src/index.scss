@@ -19,3 +19,16 @@ body{
     z-index: 1;
     cursor: pointer;
 }
+
+
+@media (max-width:768px) {
+    .logoStatic{
+        position: fixed;
+        right: 0;
+        top: 0;
+        padding: 10px 10px;
+        z-index: 1;
+        transform: scale(0.7);
+        cursor: pointer;
+    }
+}

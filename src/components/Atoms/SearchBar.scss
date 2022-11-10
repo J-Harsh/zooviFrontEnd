@@ -36,3 +36,10 @@
         }
     }
 }
+
+@media (max-width:768px) {
+
+    input[type=search]{
+        padding: 12px 13px !important;
+    }
+}

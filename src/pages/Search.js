@@ -1,15 +1,27 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import Searchbar from "../components/Atoms/Searchbar";
 import SearchPopup from "../components/SearchPopup";
+import { DataState } from "../DataContext";
 import "./search.scss";
 
 const Search = () => {
-
+  
+  const{setFilters}=DataState();
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const navigate=useNavigate();
+
+  useEffect(() => {
+    setFilters((prev)=>{
+      return({
+        ...prev,
+        search:"",
+      })
+    })
+  }, [])
+  
 
   return (
     <div className="search">

@@ -7,4 +7,21 @@
     gap: 20px;
 
   }
+
+  .notFound{
+    text-align: center;
+    width: 80%;
+    margin: 50px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .productContainer {
+    flex: 5;
+
+    .cards{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+  }
 }

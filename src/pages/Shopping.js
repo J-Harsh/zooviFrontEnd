@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Searchbar from "../components/Atoms/Searchbar";
 import FilterSection from "../components/FilterSection";
 import ProductSection from "../components/ProductSection";
 import Logo from "../assets/images/logo.png";
 import "./Shopping.scss";
 import { useNavigate } from "react-router-dom";
+import { DataState } from "../DataContext";
 
 const Shopping = () => {
   
   const setOpen = () => {};
+  const{filters}=DataState();
+
+  useEffect(() => {
+    setInput(filters.search)
+  }, [])
   
   const [input, setInput] = useState("");
   const navigate=useNavigate();
