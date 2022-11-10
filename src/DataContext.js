@@ -9,6 +9,10 @@ const [products, setProducts] = useState(null);
 const [company, setCompany] = useState(null);
 const [filters, setFilters] = useState({"brands":[],"rangeMax":null,"rating":[],"search":""});
 
+console.log(products);
+console.log(company);
+console.log(filters);
+
 useEffect(() => {
 
 setCompany(data.brands);
