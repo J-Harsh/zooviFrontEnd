@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 *{
     margin:0; 
     padding:0;
@@ -6,4 +8,14 @@
 
 body{
     margin: 0 ;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logoStatic{
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 20px 20px;
+    z-index: 1;
+    cursor: pointer;
 }

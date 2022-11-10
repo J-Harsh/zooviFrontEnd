@@ -1,22 +1,34 @@
-import React,{useEffect} from "react";
+import React,{useEffect,useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { DataState } from "../../DataContext";
 import "./SearchBar.scss";
 
-const Searchbar = ({setOpen}) => {
+const Searchbar = ({setOpen,setInput,input}) => {
 
-  const {search, setSearch}=DataState();
+  const {setFilters}=DataState();
+
+
   const navigate=useNavigate();
 
+
   useEffect(() => {
-    if(search==="")
-    setOpen(false);
-  }, [search])
+    if(input==="")
+      setOpen(false);
+      
+  }, [input])
 
   const handleClick=(e)=>{
     e.preventDefault();
+    setFilters((prev)=>{
+      return({
+        ...prev,
+        search:input,
+      })
+    })
+    
     const path=`/shopping`
     navigate(path);
+
     
   }
   
@@ -24,7 +36,7 @@ const Searchbar = ({setOpen}) => {
   
   return (
     <form className="searchbar-container">
-      <input  onChange={(e)=>{setOpen(true);setSearch(e.target.value)}} type="search" placeholder="Search for an item" value={search} />
+      <input  onChange={(e)=>{setOpen(true);setInput(e.target.value)}} type="search" placeholder="Search for an item" value={input} />
       <button type="submit"  className="search-btn" onClick={e=>{handleClick(e)}} >
         <svg
           xmlns="http://www.w3.org/2000/svg"

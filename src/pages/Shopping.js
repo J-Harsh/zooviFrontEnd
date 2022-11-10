@@ -1,26 +1,31 @@
 import React, { useState } from "react";
-import ProductCard from "../components/Atoms/ProductCard";
 import Searchbar from "../components/Atoms/Searchbar";
 import FilterSection from "../components/FilterSection";
 import ProductSection from "../components/ProductSection";
-import { DataState } from "../DataContext";
+import Logo from "../assets/images/logo.png";
 import "./Shopping.scss";
+import { useNavigate } from "react-router-dom";
 
 const Shopping = () => {
+  
   const setOpen = () => {};
   
+  const [input, setInput] = useState("");
+  const navigate=useNavigate();
 
   return (
-    <div className="navBar">
-      <nav>
-        <Searchbar setOpen={setOpen} />
-      </nav>
-      <h1>Search Results</h1>
+    <div>
+      
+      <img onClick={()=>{navigate('/')}} className="logoStatic" src={Logo}></img>
+      <div className="searchbarContainer">
+        <Searchbar input={input} setInput={setInput} setOpen={setOpen} />
+      </div>
+      
+      <h1
+      className="heading">Search Results</h1>
       <div className="content">
-          <FilterSection/>  
-        <div className="productContainer">
-          <ProductSection/>
-        </div>
+        <FilterSection />
+        <ProductSection />
       </div>
     </div>
   );

@@ -1,19 +1,14 @@
-.navBar{
-    h1{
-        
-            margin: 12px 0px 12px 16px;
-        
-    }
+.searchbarContainer{
+    margin: 24px auto;
+    width: 50%;
+    
+}
+
+.heading{
+    margin-left: 32px;
 }
 
 .content{
     display: flex;
-   
 
-   
-
-    .productContainer{
-        flex: 7;
-        background: red;
-    }
 }

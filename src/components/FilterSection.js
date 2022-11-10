@@ -32,7 +32,7 @@ const FilterSection = () => {
 
   return (
     <div className="filterSection">
-      <heading
+      <header
         className="filterHeading "
         onClick={() => {
           setBrandsOpen(!brandsOpen);
@@ -40,7 +40,7 @@ const FilterSection = () => {
       >
         <h2>brands</h2>
         {brandsOpen ? <AiOutlineUp />  : <AiOutlineDown />}
-      </heading>
+      </header>
       {brandsOpen && (
         <div className="filterContainer">
           {company.map((item, index) => (
@@ -56,7 +56,7 @@ const FilterSection = () => {
           ))}
         </div>
       )}
-      <heading
+      <header
         className="filterHeading "
         onClick={() => {
           setPriceOpen(!priceOpen);
@@ -64,7 +64,7 @@ const FilterSection = () => {
       >
         <h2>Price</h2>
         {priceOpen ? <AiOutlineUp />  : <AiOutlineDown />}
-      </heading>
+      </header>
       {priceOpen && (
         <div className="filterContainer">
           <div>
@@ -81,7 +81,7 @@ const FilterSection = () => {
           </div>
         </div>
       )}
-      <heading
+      <header
         className="filterHeading "
         onClick={() => {
           setRatingOpen(!ratingOpen);
@@ -89,10 +89,10 @@ const FilterSection = () => {
       >
         <h2>Rating</h2>
         {ratingOpen ?<AiOutlineUp />  : <AiOutlineDown />}
-      </heading>
+      </header>
       {ratingOpen && (
         <div className="filterContainer">
-          <div class="rate">
+          <div >
             {[...Array(5)].map((_,index)=>{
               return(
                 <div key={index} className="fliterHolder">
